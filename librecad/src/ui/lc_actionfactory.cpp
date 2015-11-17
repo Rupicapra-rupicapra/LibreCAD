@@ -1209,6 +1209,7 @@ QMap<QString, QAction*> LC_ActionFactory::action_map(QObject* action_handler
 
     action = new QAction(tr("Export as PDF"), disable_group);
     action->setIcon(QIcon(":/actions/fileexportpdf.png"));
+    action->setShortcut(QKeySequence(tr("Ctrl+Shift+P")));
     connect(action, SIGNAL(triggered()), main_window, SLOT(slotFilePrintPDF()));
     action->setData("FilePrintPDF");
     a_map["FilePrintPDF"] = action;
